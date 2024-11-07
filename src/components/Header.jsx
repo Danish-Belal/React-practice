@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
-import UserContext from '../utils/contexProvider'
+import  useFetchUser  from '../utils/contexProvider'
 
 function Header() {
      console.log("Header");
      
-     const user = useContext(UserContext);
-     
+     // const user = useContext(UserContext);
+     const user = useFetchUser();
+
      console.log("USER",user);
   return (
      <>
