@@ -4,6 +4,7 @@ import './App.css'
 import {UserContext} from './utils/contexProvider';
 import DashBoard from './components/DashBoard';
 import UseRef from './Hooks/UseRef';
+import UseReducer from './Hooks/UseReducer';
 
 function App() {
   
@@ -28,7 +29,8 @@ function App() {
         <DashBoard />
       </UserContext.Provider> */}
 
-      <UseRef />
+      {/* <UseRef /> */}
+      <UseReducer />
     </div>
   )
 }
