@@ -11,11 +11,17 @@ function UseReducer() {
        dispatch({ type: 'Add', todo });
      };
 
+     const handleRemove = (todo) =>{
+          console.log("TODO TO REMOVE", todo);
+          
+          dispatch({type: 'remove', todo})
+     }
+
      function handleClick(){
           const todo ={
-               "id": 1,
+               "id": todos.length+1,
                "name" : "Book reading",
-               "complete" : true
+               "complete" : false
           }
           handleComplete(todo);
      }
@@ -23,6 +29,15 @@ function UseReducer() {
      return (
        <>
          <button onClick={handleClick}> Click Me</button>
+
+         <ul>
+        {todos.map((todo) => (
+          <li key={todo.id}>
+            {todo.name} - {todo.complete ? "Complete" : "Incomplete"}
+            <button onClick={() => handleRemove(todo)}>Remove</button>
+          </li>
+        ))}
+      </ul>
        </>
      );
 }
