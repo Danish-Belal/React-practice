@@ -6,6 +6,7 @@ import DashBoard from './components/DashBoard';
 import UseRef from './Hooks/reducers/UseRef';
 import UseReducer from './Hooks/reducers/UseReducer';
 import UseCallback from './Hooks/UseCallback';
+import UseMemo from './Hooks/UseMemo';
 
 function App() {
   
@@ -32,7 +33,8 @@ function App() {
 
       {/* <UseRef /> */}
       {/* <UseReducer /> */}
-      <UseCallback />
+      {/* <UseCallback /> */}
+      <UseMemo />
     </div>
   )
 }
