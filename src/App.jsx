@@ -3,8 +3,9 @@ import Todo from './components/Todo';
 import './App.css'
 import {UserContext} from './utils/contexProvider';
 import DashBoard from './components/DashBoard';
-import UseRef from './Hooks/UseRef';
-import UseReducer from './Hooks/UseReducer';
+import UseRef from './Hooks/reducers/UseRef';
+import UseReducer from './Hooks/reducers/UseReducer';
+import UseCallback from './Hooks/UseCallback';
 
 function App() {
   
@@ -30,7 +31,8 @@ function App() {
       </UserContext.Provider> */}
 
       {/* <UseRef /> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+      <UseCallback />
     </div>
   )
 }
